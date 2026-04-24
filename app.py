@@ -29,7 +29,7 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # ── Cargar el HTML del portafolio ────────────────────────────────────────────
-html_file = Path(__file__).parent / "portfolio.html"
+html_file = Path(__file__).parent / "portafolio.html"
 
 # Lee solo el contenido del <body> para embeber en Streamlit
 with open(html_file, "r", encoding="utf-8") as f:

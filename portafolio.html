@@ -558,7 +558,9 @@
     <div class="drawer-body">
       <div>
         <div class="d-label">Demo del proyecto</div>
-        <div class="video-wrap" id="d-video"></div>
+        <div class="video-wrap" id="d-video">
+
+        </div>
       </div>
       <div class="d-divider"></div>
       <div>
@@ -583,47 +585,52 @@ const BASE = 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/';
 
 const proyectos = {
   agenda: {
-    title:'Agenda de Actividades', year:'2023', status:'finished', statusLabel:'Terminado',
+    title:'Agenda de Actividades', year:'2025', status:'finished', statusLabel:'Terminado',
     logo: BASE+'AgendaLog.png',
     stack:['Java','JSP','HTML','CSS','SQL Workbench','MVC'],
     desc:'Aplicación web con arquitectura MVC para gestión de actividades, usuarios y permisos. Incluye autenticación, roles y operaciones CRUD completas.',
-    mediaType:'none', mediaSrc:'',
+    mediaType: 'video',
+    mediaSrc:  'Videos/Agenda.mp4',
     github:'https://github.com/yulkatesp', demo:'',
   },
   emulador: {
-    title:'Emulador de Juegos', year:'2023', status:'finished', statusLabel:'Terminado',
+    title:'Emulador de Juegos', year:'2025', status:'finished', statusLabel:'Terminado',
     logo: BASE+'EmuLogo.png',
     stack:['Python','PyQt5','Qt Designer','PyGame','TKinter'],
     desc:'Emulador de escritorio que integra juegos construidos con Pygame y TKinter dentro de una interfaz PyQt5 unificada.',
-    mediaType:'none', mediaSrc:'',
+    mediaType: 'video',
+    mediaSrc:  'Videos/Emulador.mp4',
     github:'https://github.com/yulkatesp', demo:'',
   },
   ods14: {
-    title:'App Lecciones ODS 14 — Vida Submarina', year:'2023', status:'finished', statusLabel:'Terminado',
+    title:'App Lecciones ODS 14 — Vida Submarina', year:'2025', status:'finished', statusLabel:'Terminado',
     logo: BASE+'AprenLogo.png',
     stack:['Python','Django','Expo GO','React Native'],
     desc:'Aplicación móvil para el aprendizaje sobre vida submarina, contribuyendo al ODS 14 de la ONU. Backend en Django y frontend con Expo GO.',
-    mediaType:'none', mediaSrc:'',
+    mediaType: 'video',
+    mediaSrc:  'Videos/Mar.mp4',
     github:'https://github.com/yulkatesp', demo:'',
   },
   lengua: {
-    title:'Programa Lengua de Señas Colombiana', year:'2022', status:'finished', statusLabel:'Terminado',
+    title:'Programa Lengua de Señas Colombiana', year:'2023', status:'finished', statusLabel:'Terminado',
     logo: BASE+'LengLogo.png',
     stack:['Python','PyQt5','Qt Designer'],
     desc:'Programa de escritorio para aprender LSC con categorías de vocabulario básico, abecedario e ilustraciones interactivas.',
-    mediaType:'none', mediaSrc:'',
+    mediaType: 'video',
+    mediaSrc:  'Videos/LS.mp4',
     github:'https://github.com/yulkatesp', demo:'',
   },
   dashboard: {
-    title:'Dashboard — Gestión de Seguridad', year:'2024', status:'finished', statusLabel:'Terminado',
+    title:'Dashboard — Gestión de Seguridad', year:'2025', status:'finished', statusLabel:'Terminado',
     logo: BASE+'GestLogo.png',
     stack:['HTML','CSS'],
     desc:'Dashboard de seguridad informática basado en normas ISO que visualiza la gestión de activos de una app de agenda con datos sensibles de usuarios.',
-    mediaType:'none', mediaSrc:'',
+    mediaType: 'video',
+    mediaSrc:  'Videos/Dashboard.mp4',
     github:'https://github.com/yulkatesp', demo:'',
   },
   iso: {
-    title:'Herramienta Auditoría ISO 27001', year:'2024', status:'live', statusLabel:'En vivo',
+    title:'Herramienta Auditoría ISO 27001', year:'2026', status:'live', statusLabel:'En vivo',
     logo: BASE+'IsoLogo.png',
     stack:['Python','Django','ISO 27001','Excel','PDF'],
     desc:'Herramienta CRUD para checklist de controles ISO 27001. Registra empresas, genera reportes en Excel y PDF, y administra activos, vulnerabilidades y versiones de documentos.',
@@ -631,7 +638,7 @@ const proyectos = {
     github:'https://github.com/yulkatesp', demo:'',
   },
   'agenda-movil': {
-    title:'App Móvil Agenda Estudiantil', year:'2024', status:'live', statusLabel:'En vivo',
+    title:'App Móvil Agenda Estudiantil', year:'2026', status:'live', statusLabel:'En vivo',
     logo: BASE+'TareasLogo.png',
     stack:['Kotlin','Java','XAMPP','MySQL','PHP'],
     desc:'App Android CRUD para gestión académica estudiantil con registro de tareas, exámenes y calendario. Frontend en Kotlin y backend en Java + PHP sobre XAMPP.',

@@ -41,6 +41,6 @@ import streamlit.components.v1 as components
 
 components.html(
     html_content,
-    height=500,          # Ajusta según la altura de tu diseño
+    height=600,          # Ajusta según la altura de tu diseño
     scrolling=False,
 )

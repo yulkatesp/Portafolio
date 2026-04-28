@@ -22,7 +22,14 @@ Estudiante de **Ingeniería de Sistemas** en la Universidad de San Buenaventura 
 
 ---
 
-## 🛠️ Stack tecnológico
+## Portafolio
+
+<!-- Sube tu video a YouTube y reemplaza VIDEO_ID con el id del video -->
+[![Demo del proyecto](Img/port.png)](https://kat-portafolio.streamlit.app/)
+
+> Haz clic en la imagen para ver la demo completa
+
+## Stack tecnológico
 
 | Área | Tecnologías |
 |---|---|

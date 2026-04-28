@@ -12,13 +12,13 @@
 
 ---
 
-## 👩‍💻 Sobre mí
+## Sobre mí
 
-Estudiante de **Ingeniería de Sistemas** en la Universidad Simon Bolivar (9° semestre), apasionada por crear experiencias digitales donde el diseño y el código se encuentran. Transformo ideas en interfaces funcionales, bonitas, accesibles y seguras.
+Estudiante de **Ingeniería de Sistemas** en la Universidad de San Buenaventura (9° semestre), apasionada por crear experiencias digitales donde el diseño y el código se encuentran. Transformo ideas en interfaces funcionales, bonitas, accesibles y seguras.
 
 > *"Diseño + Código + Ciberseguridad"*
 
-📍 Bogotá, Colombia &nbsp;·&nbsp; 🕐 UTC-5
+ Bogotá, Colombia &nbsp;·&nbsp; 🕐 UTC-5
 
 ---
 
@@ -35,58 +35,58 @@ Estudiante de **Ingeniería de Sistemas** en la Universidad Simon Bolivar (9° s
 
 ---
 
-## 🚀 Proyectos destacados
+## Proyectos destacados
 
-### 🔐 Herramienta de Auditoría ISO 27001
+### Herramienta de Auditoría ISO 27001
 > CRUD para checklist de controles ISO 27001 con reportes en Excel, PDF y dashboards de cumplimiento.
 
 `Python` `Django` `ISO 27001`
 
 ---
 
-### 📱 App Móvil Agenda Estudiantil
+### App Móvil Agenda Estudiantil
 > CRUD para gestión académica con exámenes, tareas y calendario. Frontend Kotlin, backend Java + PHP.
 
 `Kotlin` `Java` `XAMPP` `MySQL`
 
 ---
 
-### 📅 Agenda de Actividades
+### Agenda de Actividades
 > Aplicación web con arquitectura MVC para gestionar actividades, usuarios y permisos.
 
 `Java` `JSP` `HTML` `CSS` `SQL Workbench` `MVC`
 
 ---
 
-### 🎮 Emulador de Juegos
+### Emulador de Juegos
 > Emulador de juegos desarrollado con librerías gráficas Python.
 
 `Python` `PyQt5` `QtDesigner` `PyGame` `TKinter`
 
 ---
 
-### 🌊 App Móvil Lecciones ODS 14 — Vida Submarina
+### App Móvil Lecciones ODS 14 — Vida Submarina
 > Aplicación para el aprendizaje de la vida marítima y el ODS 14 de la ONU.
 
 `Python` `Django` `ExpoGO`
 
 ---
 
-### 🔒 Dashboard — Gestión de Seguridad
+### Dashboard — Gestión de Seguridad
 > Dashboard de gestión de seguridad basado en normas ISO para activos de una app de agenda.
 
 `HTML` `CSS`
 
 ---
 
-### 🤟 Programa Lengua de Señas Colombiana
+### Programa Lengua de Señas Colombiana
 > Programa con categorías para el aprendizaje de palabras básicas y abecedario en LSC.
 
 `Python` `PyQt5` `QtDesigner`
 
 ---
 
-## 📊 Estadísticas
+## Estadísticas
 
 <div align="center">
 
@@ -97,17 +97,17 @@ Estudiante de **Ingeniería de Sistemas** en la Universidad Simon Bolivar (9° s
 
 ---
 
-## 📬 Contacto
+## Contacto
 
 | | |
 |---|---|
-| 📧 Email | katherineee12365@gmail.com |
-| 💼 LinkedIn | [katerin-espitia-ayala](https://linkedin.com/in/katerin-espitia-ayala) |
-| 🌐 Portafolio | [kat-portafolio.streamlit.app](https://kat-portafolio.streamlit.app/) |
-| 📍 Ubicación | Bogotá, Colombia |
+| Email | katherineee12365@gmail.com |
+| LinkedIn | [katerin-espitia-ayala](https://linkedin.com/in/katerin-espitia-ayala) |
+| Portafolio | [kat-portafolio.streamlit.app](https://kat-portafolio.streamlit.app/) |
+| Ubicación | Bogotá, Colombia |
 
 ---
 
 <div align="center">
-  <sub>Hecho con ❤️ por Katerin · 2025</sub>
+  <sub>Hecho con por Katerin · 2026</sub>
 </div>

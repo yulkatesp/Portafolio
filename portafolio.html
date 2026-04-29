@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio — Yuliet Katerin</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Serif+Display:ital@0;1&display=swap"
+    rel="stylesheet">
   <style>
     :root {
       --rose: #E8828A;
@@ -20,709 +22,1930 @@
       --text-muted: #C4B4B6;
       --border: #EDE0E2;
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family:'DM Sans',sans-serif;
-      background:var(--bg); min-height:100vh;
-      display:flex; align-items:center; justify-content:center; padding:24px;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
     }
+
     .app {
-      display:grid; grid-template-columns:68px 1fr 300px;
-      width:100%; max-width:1200px; height:680px;
-      background:var(--card); border-radius:28px; overflow:hidden;
-      box-shadow:0 20px 60px rgba(200,90,100,.12),0 4px 16px rgba(0,0,0,.06);
-      animation:fadeUp .5s ease both;
+      display: grid;
+      grid-template-columns: 68px 1fr 300px;
+      width: 100%;
+      max-width: 1200px;
+      height: 680px;
+      background: var(--card);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(200, 90, 100, .12), 0 4px 16px rgba(0, 0, 0, .06);
+      animation: fadeUp .5s ease both;
     }
-    @keyframes fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
-    @keyframes viewIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(14px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    @keyframes viewIn {
+      from {
+        opacity: 0;
+        transform: translateY(8px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
 
     /* ── SIDEBAR ── */
     .sidebar {
-      background:var(--sidebar-bg); display:flex; flex-direction:column;
-      align-items:center; padding:28px 0; gap:6px; border-right:1px solid var(--border);
+      background: var(--sidebar-bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 28px 0;
+      gap: 6px;
+      border-right: 1px solid var(--border);
     }
+
     .sidebar-logo {
-      width:38px; height:38px; background:var(--rose); border-radius:12px;
-      display:flex; align-items:center; justify-content:center;
-      margin-bottom:20px; position:relative; cursor:pointer; transition:transform .2s;
+      width: 38px;
+      height: 38px;
+      background: var(--rose);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+      cursor: pointer;
+      transition: transform .2s;
     }
-    .sidebar-logo:hover { transform:scale(1.08); }
+
+    .sidebar-logo:hover {
+      transform: scale(1.08);
+    }
+
     .sidebar-logo::after {
-      content:''; width:8px; height:8px; background:#fff; border-radius:50%;
-      position:absolute; top:-3px; right:-3px; border:2px solid var(--sidebar-bg);
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      border: 2px solid var(--sidebar-bg);
     }
-    .sidebar-logo svg { width:18px; height:18px; fill:none; stroke:white; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+
+    .sidebar-logo svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: white;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
     .nav-btn {
-      width:42px; height:42px; border-radius:12px;
-      display:flex; align-items:center; justify-content:center;
-      cursor:pointer; transition:all .2s; color:var(--text-muted); position:relative;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all .2s;
+      color: var(--text-muted);
+      position: relative;
     }
-    .nav-btn:hover  { background:var(--rose-pale); color:var(--rose); }
-    .nav-btn.active { background:var(--rose-pale); color:var(--rose); }
+
+    .nav-btn:hover {
+      background: var(--rose-pale);
+      color: var(--rose);
+    }
+
+    .nav-btn.active {
+      background: var(--rose-pale);
+      color: var(--rose);
+    }
+
     .nav-btn.active::before {
-      content:''; position:absolute; left:-1px; top:50%; transform:translateY(-50%);
-      width:3px; height:22px; background:var(--rose); border-radius:0 3px 3px 0;
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 22px;
+      background: var(--rose);
+      border-radius: 0 3px 3px 0;
     }
-    .nav-btn svg { width:18px; height:18px; }
-    .sidebar-spacer { flex:1; }
+
+    .nav-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .sidebar-spacer {
+      flex: 1;
+    }
 
     /* ── MAIN ── */
-    .main { display:flex; flex-direction:column; overflow:hidden; }
-    .topbar { padding:20px 26px 0; display:flex; align-items:center; gap:14px; flex-shrink:0; }
-    .page-label { font-family:'DM Serif Display',serif; font-size:20px; color:var(--text-primary); letter-spacing:-.3px; flex:1; }
-    .page-label span { color:var(--rose); }
-    .view { display:none; flex-direction:column; flex:1; overflow:hidden; }
-    .view.active { display:flex; animation:viewIn .3s ease both; }
+    .main {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .topbar {
+      padding: 20px 26px 0;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+
+    .page-label {
+      font-family: 'DM Serif Display', serif;
+      font-size: 20px;
+      color: var(--text-primary);
+      letter-spacing: -.3px;
+      flex: 1;
+    }
+
+    .page-label span {
+      color: var(--rose);
+    }
+
+    .view {
+      display: none;
+      flex-direction: column;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .view.active {
+      display: flex;
+      animation: viewIn .3s ease both;
+    }
 
     /* ── PERFIL ── */
-    .bio-section { padding:18px 26px 0; flex-shrink:0; }
+    .bio-section {
+      padding: 18px 26px 0;
+      flex-shrink: 0;
+    }
+
     .bio-card {
-      background:linear-gradient(135deg,#FDF0F1 0%,#F8E8EA 100%);
-      border:1px solid var(--border); border-radius:20px;
-      padding:22px; display:flex; gap:20px; align-items:flex-start; position:relative; overflow:hidden;
+      background: linear-gradient(135deg, #FDF0F1 0%, #F8E8EA 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 22px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      position: relative;
+      overflow: hidden;
     }
+
     .bio-card::before {
-      content:''; position:absolute; top:-40px; right:-40px;
-      width:160px; height:160px; border-radius:50%;
-      background:radial-gradient(circle,rgba(232,130,138,.18),transparent 70%); pointer-events:none;
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232, 130, 138, .18), transparent 70%);
+      pointer-events: none;
     }
-    .avatar-wrap { position:relative; flex-shrink:0; }
+
+    .avatar-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+
     .avatar-ring {
-      width:80px; height:80px; border-radius:22px;
-      background:linear-gradient(135deg,var(--rose-light),var(--rose-pale));
-      display:flex; align-items:center; justify-content:center;
-      font-size:34px; box-shadow:0 4px 16px rgba(232,130,138,.25); overflow:hidden;
+      width: 80px;
+      height: 80px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--rose-light), var(--rose-pale));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      box-shadow: 0 4px 16px rgba(232, 130, 138, .25);
+      overflow: hidden;
     }
-    .avatar-ring img { width:100%; height:100%; object-fit:cover; }
-    .status-dot { width:12px; height:12px; background:#5CC98B; border-radius:50%; border:2px solid var(--card); position:absolute; bottom:-2px; right:-2px; }
-    .bio-content { flex:1; }
-    .bio-name { font-family:'DM Serif Display',serif; font-size:21px; color:var(--text-primary); letter-spacing:-.4px; line-height:1.1; }
-    .bio-role { font-size:12.5px; color:var(--rose-deep); font-weight:500; margin:4px 0 10px; display:flex; align-items:center; gap:6px; }
-    .bio-role::before { content:''; width:16px; height:2px; background:var(--rose-light); border-radius:2px; }
-    .bio-text { font-size:12.5px; color:var(--text-secondary); line-height:1.65; }
-    .bio-tags { display:flex; gap:6px; margin-top:10px; flex-wrap:wrap; }
-    .tag { font-size:11px; font-weight:500; padding:4px 10px; border-radius:20px; background:white; color:var(--rose-deep); border:1px solid var(--rose-light); }
-    .skills-section { padding:14px 26px 0; flex:1; overflow:hidden; display:flex; flex-direction:column; }
-    .section-title { font-size:11px; font-weight:500; color:var(--text-muted); text-transform:uppercase; letter-spacing:.6px; margin-bottom:10px; }
-    .skills-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; overflow-y:auto; padding-bottom:16px; }
-    .skills-grid::-webkit-scrollbar { width:3px; }
-    .skills-grid::-webkit-scrollbar-thumb { background:var(--rose-light); border-radius:10px; }
-    .skill-card { background:var(--bg); border-radius:14px; padding:10px 13px; display:flex; align-items:center; gap:10px; cursor:pointer; transition:all .22s; border:1px solid transparent; height:50px; }
-    .skill-card:hover { background:var(--rose-pale); border-color:var(--rose-light); transform:translateY(-1px); }
-    .skill-card img { width:30px; height:30px; object-fit:contain; flex-shrink:0; }
-    .skill-name { font-size:12px; font-weight:500; color:var(--text-primary); }
+
+    .avatar-ring img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .status-dot {
+      width: 12px;
+      height: 12px;
+      background: #5CC98B;
+      border-radius: 50%;
+      border: 2px solid var(--card);
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+    }
+
+    .bio-content {
+      flex: 1;
+    }
+
+    .bio-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 21px;
+      color: var(--text-primary);
+      letter-spacing: -.4px;
+      line-height: 1.1;
+    }
+
+    .bio-role {
+      font-size: 12.5px;
+      color: var(--rose-deep);
+      font-weight: 500;
+      margin: 4px 0 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .bio-role::before {
+      content: '';
+      width: 16px;
+      height: 2px;
+      background: var(--rose-light);
+      border-radius: 2px;
+    }
+
+    .bio-text {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .bio-tags {
+      display: flex;
+      gap: 6px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: white;
+      color: var(--rose-deep);
+      border: 1px solid var(--rose-light);
+    }
+
+    .skills-section {
+      padding: 14px 26px 0;
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      margin-bottom: 10px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      overflow-y: auto;
+      padding-bottom: 16px;
+    }
+
+    .skills-grid::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    .skills-grid::-webkit-scrollbar-thumb {
+      background: var(--rose-light);
+      border-radius: 10px;
+    }
+
+    .skill-card {
+      background: var(--bg);
+      border-radius: 14px;
+      padding: 10px 13px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all .22s;
+      border: 1px solid transparent;
+      height: 50px;
+    }
+
+    .skill-card:hover {
+      background: var(--rose-pale);
+      border-color: var(--rose-light);
+      transform: translateY(-1px);
+    }
+
+    .skill-card img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .skill-name {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
 
     /* ── HOME ── */
-    .home-content { padding:20px 26px; flex:1; overflow-y:auto; display:flex; flex-direction:column; gap:16px; }
-    .home-hero { background:linear-gradient(135deg,#FDF0F1,#F8E8EA); border-radius:20px; padding:24px 28px; border:1px solid var(--border); position:relative; overflow:hidden; }
-    .home-hero::after { content:''; position:absolute; right:-20px; top:-20px; width:120px; height:120px; border-radius:50%; background:radial-gradient(circle,rgba(232,130,138,.2),transparent 70%); }
-    .home-greeting { font-size:12px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.5px; }
-    .home-title { font-family:'DM Serif Display',serif; font-size:26px; color:var(--text-primary); letter-spacing:-.5px; line-height:1.15; margin:6px 0 10px; }
-    .home-title span { color:var(--rose); font-style:italic; }
-    .home-desc { font-size:13px; color:var(--text-secondary); line-height:1.6; max-width:420px; }
-    .home-cta { display:inline-flex; align-items:center; gap:7px; margin-top:16px; background:var(--rose); color:white; border:none; border-radius:12px; padding:10px 18px; font-family:'DM Sans',sans-serif; font-size:12.5px; font-weight:500; cursor:pointer; transition:all .22s; }
-    .home-cta:hover { background:var(--rose-deep); transform:translateY(-1px); }
-    .home-cta svg { width:14px; height:14px; }
-    .home-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
-    .home-stat-card { background:var(--bg); border-radius:16px; padding:16px; text-align:center; border:1px solid var(--border); transition:all .2s; cursor:default; }
-    .home-stat-card:hover { background:var(--rose-pale); border-color:var(--rose-light); }
-    .home-stat-num { font-family:'DM Serif Display',serif; font-size:28px; color:var(--text-primary); line-height:1; }
-    .home-stat-lbl { font-size:11px; color:var(--text-muted); margin-top:4px; text-transform:uppercase; letter-spacing:.4px; }
-    .home-recent-title { font-size:11px; font-weight:500; color:var(--text-muted); text-transform:uppercase; letter-spacing:.6px; margin-bottom:10px; }
-    .recent-list { display:flex; flex-direction:column; gap:8px; }
-    .recent-item { display:flex; align-items:center; gap:12px; padding:11px 14px; background:var(--bg); border-radius:13px; border:1px solid transparent; cursor:pointer; transition:all .2s; }
-    .recent-item:hover { background:var(--rose-pale); border-color:var(--rose-light); }
-    .recent-dot { width:8px; height:8px; border-radius:50%; background:var(--rose); flex-shrink:0; }
-    .recent-text { flex:1; font-size:12.5px; color:var(--text-primary); font-weight:500; }
-    .recent-meta { font-size:11px; color:var(--text-muted); }
+    .home-content {
+      padding: 20px 26px;
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .home-hero {
+      background: linear-gradient(135deg, #FDF0F1, #F8E8EA);
+      border-radius: 20px;
+      padding: 24px 28px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .home-hero::after {
+      content: '';
+      position: absolute;
+      right: -20px;
+      top: -20px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(232, 130, 138, .2), transparent 70%);
+    }
+
+    .home-greeting {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .home-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      color: var(--text-primary);
+      letter-spacing: -.5px;
+      line-height: 1.15;
+      margin: 6px 0 10px;
+    }
+
+    .home-title span {
+      color: var(--rose);
+      font-style: italic;
+    }
+
+    .home-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      max-width: 420px;
+    }
+
+    .home-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 16px;
+      background: var(--rose);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 18px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12.5px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .22s;
+    }
+
+    .home-cta:hover {
+      background: var(--rose-deep);
+      transform: translateY(-1px);
+    }
+
+    .home-cta svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .home-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .home-stat-card {
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: all .2s;
+      cursor: default;
+    }
+
+    .home-stat-card:hover {
+      background: var(--rose-pale);
+      border-color: var(--rose-light);
+    }
+
+    .home-stat-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      color: var(--text-primary);
+      line-height: 1;
+    }
+
+    .home-stat-lbl {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+
+    .home-recent-title {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      margin-bottom: 10px;
+    }
+
+    .recent-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .recent-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 14px;
+      background: var(--bg);
+      border-radius: 13px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    .recent-item:hover {
+      background: var(--rose-pale);
+      border-color: var(--rose-light);
+    }
+
+    .recent-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--rose);
+      flex-shrink: 0;
+    }
+
+    .recent-text {
+      flex: 1;
+      font-size: 12.5px;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .recent-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
 
     /* ── PROYECTOS ── */
-    .projects-content { padding:16px 26px; flex:1; overflow-y:auto; }
-    .projects-content::-webkit-scrollbar { width:3px; }
-    .projects-content::-webkit-scrollbar-thumb { background:var(--rose-light); border-radius:10px; }
-    .projects-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-    .project-card { background:var(--bg); border-radius:16px; border:1px solid var(--border); overflow:hidden; cursor:pointer; transition:all .25s; }
-    .project-card:hover { transform:translateY(-3px); box-shadow:0 8px 28px rgba(200,90,100,.12); border-color:var(--rose-light); }
-    .project-thumb { height:90px; display:flex; align-items:center; justify-content:center; font-size:28px; position:relative; overflow:hidden; }
-    .project-body { padding:12px 14px; }
-    .project-name { font-size:13px; font-weight:500; color:var(--text-primary); margin-bottom:4px; }
-    .project-desc { font-size:11.5px; color:var(--text-secondary); line-height:1.5; margin-bottom:8px; }
-    .project-tags { display:flex; gap:5px; flex-wrap:wrap; }
-    .p-tag { font-size:10px; font-weight:500; padding:3px 8px; border-radius:20px; background:white; color:var(--rose-deep); border:1px solid var(--rose-light); }
-    .project-footer { padding:8px 14px 12px; display:flex; align-items:center; justify-content:space-between; }
-    .project-link { font-size:11px; color:var(--rose); font-weight:500; display:flex; align-items:center; gap:4px; cursor:pointer; border:none; background:none; font-family:inherit; }
-    .project-link svg { width:11px; height:11px; transition:transform .2s; }
-    .project-card:hover .project-link svg { transform:translateX(3px); }
+    .projects-content {
+      padding: 16px 26px;
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .projects-content::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    .projects-content::-webkit-scrollbar-thumb {
+      background: var(--rose-light);
+      border-radius: 10px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .project-card {
+      background: var(--bg);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      cursor: pointer;
+      transition: all .25s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(200, 90, 100, .12);
+      border-color: var(--rose-light);
+    }
+
+    .project-thumb {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-body {
+      padding: 12px 14px;
+    }
+
+    .project-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .project-desc {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .p-tag {
+      font-size: 10px;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 20px;
+      background: white;
+      color: var(--rose-deep);
+      border: 1px solid var(--rose-light);
+    }
+
+    .project-footer {
+      padding: 8px 14px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .project-link {
+      font-size: 11px;
+      color: var(--rose);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+    }
+
+    .project-link svg {
+      width: 11px;
+      height: 11px;
+      transition: transform .2s;
+    }
+
+    .project-card:hover .project-link svg {
+      transform: translateX(3px);
+    }
 
     /* ── CERTIFICADOS ── */
-    .certs-content { padding:16px 26px; flex:1; overflow-y:auto; display:flex; flex-direction:column; gap:10px; }
-    .certs-content::-webkit-scrollbar { width:3px; }
-    .certs-content::-webkit-scrollbar-thumb { background:var(--rose-light); border-radius:10px; }
-    .cert-card { display:flex; align-items:center; gap:14px; padding:14px 16px; background:var(--bg); border-radius:16px; border:1px solid var(--border); cursor:pointer; transition:all .22s; }
-    .cert-card:hover { background:var(--rose-pale); border-color:var(--rose-light); transform:translateX(3px); }
-    .cert-info { flex:1; }
-    .cert-name { font-size:13px; font-weight:500; color:var(--text-primary); margin-bottom:3px; }
-    .cert-issuer { font-size:11.5px; color:var(--text-secondary); }
-    .cert-meta { display:flex; flex-direction:column; align-items:flex-end; gap:4px; }
-    .cert-year { font-size:11px; color:var(--text-muted); background:white; border:1px solid var(--border); border-radius:8px; padding:3px 8px; }
-    .cert-badge { font-size:10px; font-weight:500; padding:3px 8px; border-radius:8px; background:rgba(92,201,139,.12); color:#3A9E68; border:1px solid rgba(92,201,139,.25); }
+    .certs-content {
+      padding: 16px 26px;
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .certs-content::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    .certs-content::-webkit-scrollbar-thumb {
+      background: var(--rose-light);
+      border-radius: 10px;
+    }
+
+    .cert-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      background: var(--bg);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: all .22s;
+    }
+
+    .cert-card:hover {
+      background: var(--rose-pale);
+      border-color: var(--rose-light);
+      transform: translateX(3px);
+    }
+
+    .cert-info {
+      flex: 1;
+    }
+
+    .cert-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+    }
+
+    .cert-issuer {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+    }
+
+    .cert-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+
+    .cert-year {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 3px 8px;
+    }
+
+    .cert-badge {
+      font-size: 10px;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 8px;
+      background: rgba(92, 201, 139, .12);
+      color: #3A9E68;
+      border: 1px solid rgba(92, 201, 139, .25);
+    }
 
     /* ── PANEL ── */
-    .panel { border-left:1px solid var(--border); display:flex; flex-direction:column; overflow:hidden; }
-    .panel-header { padding:22px 22px 0; flex-shrink:0; }
-    .panel-title { font-family:'DM Serif Display',serif; font-size:17px; color:var(--text-primary); letter-spacing:-.2px; }
-    .panel-sub { font-size:11.5px; color:var(--text-muted); margin-top:3px; }
-    .avail-badge { display:inline-flex; align-items:center; gap:6px; background:rgba(92,201,139,.12); border:1px solid rgba(92,201,139,.3); border-radius:20px; padding:5px 12px; margin-top:14px; }
-    .avail-dot { width:7px; height:7px; border-radius:50%; background:#5CC98B; animation:pulse 2s infinite; }
-    @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(92,201,139,.4)} 50%{box-shadow:0 0 0 5px rgba(92,201,139,0)} }
-    .avail-text { font-size:11.5px; color:#3A9E68; font-weight:500; }
-    .contact-list { padding:16px 22px 0; display:flex; flex-direction:column; gap:10px; flex:1; overflow-y:auto; }
-    .contact-list::-webkit-scrollbar { width:3px; }
-    .contact-list::-webkit-scrollbar-thumb { background:var(--rose-light); border-radius:10px; }
-    .contact-item { display:flex; align-items:center; gap:12px; padding:12px 14px; background:var(--bg); border-radius:14px; cursor:pointer; transition:all .22s; border:1px solid transparent; text-decoration:none; }
-    .contact-item:hover { background:var(--rose-pale); border-color:var(--rose-light); transform:translateX(3px); }
-    .contact-icon { width:36px; height:36px; border-radius:11px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-    .contact-text { flex:1; min-width:0; }
-    .contact-label { font-size:10.5px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.4px; }
-    .contact-value { font-size:12.5px; font-weight:500; color:var(--text-primary); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-top:1px; }
-    .contact-arrow { color:var(--text-muted); transition:transform .2s,color .2s; }
-    .contact-item:hover .contact-arrow { transform:translateX(3px); color:var(--rose); }
-    .contact-arrow svg { width:13px; height:13px; }
-    .cv-btn-wrap { padding:16px 22px 22px; flex-shrink:0; }
-    .cv-btn { width:100%; background:var(--rose); color:white; border:none; border-radius:14px; padding:13px; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; transition:all .22s; letter-spacing:.2px; }
-    .cv-btn:hover { background:var(--rose-deep); transform:translateY(-1px); box-shadow:0 6px 20px rgba(200,90,100,.3); }
-    .cv-btn svg { width:15px; height:15px; }
-    .panel-footer { padding:0 22px 16px; flex-shrink:0; }
-    .location-chip { display:inline-flex; align-items:center; gap:5px; font-size:11.5px; color:var(--text-muted); background:var(--bg); border-radius:20px; padding:5px 12px; border:1px solid var(--border); }
-    .location-chip svg { width:11px; height:11px; color:var(--rose); }
+    .panel {
+      border-left: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .panel-header {
+      padding: 22px 22px 0;
+      flex-shrink: 0;
+    }
+
+    .panel-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 17px;
+      color: var(--text-primary);
+      letter-spacing: -.2px;
+    }
+
+    .panel-sub {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    .avail-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(92, 201, 139, .12);
+      border: 1px solid rgba(92, 201, 139, .3);
+      border-radius: 20px;
+      padding: 5px 12px;
+      margin-top: 14px;
+    }
+
+    .avail-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #5CC98B;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(92, 201, 139, .4)
+      }
+
+      50% {
+        box-shadow: 0 0 0 5px rgba(92, 201, 139, 0)
+      }
+    }
+
+    .avail-text {
+      font-size: 11.5px;
+      color: #3A9E68;
+      font-weight: 500;
+    }
+
+    .contact-list {
+      padding: 16px 22px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .contact-list::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    .contact-list::-webkit-scrollbar-thumb {
+      background: var(--rose-light);
+      border-radius: 10px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      background: var(--bg);
+      border-radius: 14px;
+      cursor: pointer;
+      transition: all .22s;
+      border: 1px solid transparent;
+      text-decoration: none;
+    }
+
+    .contact-item:hover {
+      background: var(--rose-pale);
+      border-color: var(--rose-light);
+      transform: translateX(3px);
+    }
+
+    .contact-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-text {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .contact-label {
+      font-size: 10.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+
+    .contact-value {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 1px;
+    }
+
+    .contact-arrow {
+      color: var(--text-muted);
+      transition: transform .2s, color .2s;
+    }
+
+    .contact-item:hover .contact-arrow {
+      transform: translateX(3px);
+      color: var(--rose);
+    }
+
+    .contact-arrow svg {
+      width: 13px;
+      height: 13px;
+    }
+
+    .cv-btn-wrap {
+      padding: 16px 22px 22px;
+      flex-shrink: 0;
+    }
+
+    .cv-btn {
+      width: 100%;
+      background: var(--rose);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      padding: 13px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all .22s;
+      letter-spacing: .2px;
+    }
+
+    .cv-btn:hover {
+      background: var(--rose-deep);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(200, 90, 100, .3);
+    }
+
+    .cv-btn svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .panel-footer {
+      padding: 0 22px 16px;
+      flex-shrink: 0;
+    }
+
+    .location-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      background: var(--bg);
+      border-radius: 20px;
+      padding: 5px 12px;
+      border: 1px solid var(--border);
+    }
+
+    .location-chip svg {
+      width: 11px;
+      height: 11px;
+      color: var(--rose);
+    }
 
     /* ══════════════════════════════
        DRAWER DE DETALLE PROYECTO
     ══════════════════════════════ */
     .overlay {
-      position:fixed; inset:0;
-      background:rgba(44,35,37,.5);
-      backdrop-filter:blur(5px);
-      z-index:200;
-      display:flex; align-items:flex-end; justify-content:center;
-      opacity:0; pointer-events:none;
-      transition:opacity .3s ease;
+      position: fixed;
+      inset: 0;
+      background: rgba(44, 35, 37, .5);
+      backdrop-filter: blur(5px);
+      z-index: 200;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
     }
-    .overlay.open { opacity:1; pointer-events:all; }
+
+    .overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
 
     .drawer {
-      width:100%; max-width:830px; max-height:86vh;
-      background:var(--card); border-radius:28px 28px 0 0;
-      overflow:hidden; display:flex; flex-direction:column;
-      transform:translateY(100%);
-      transition:transform .38s cubic-bezier(.32,0,.15,1);
-      box-shadow:0 -12px 48px rgba(200,90,100,.15);
+      width: 100%;
+      max-width: 830px;
+      max-height: 86vh;
+      background: var(--card);
+      border-radius: 28px 28px 0 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(100%);
+      transition: transform .38s cubic-bezier(.32, 0, .15, 1);
+      box-shadow: 0 -12px 48px rgba(200, 90, 100, .15);
     }
-    .overlay.open .drawer { transform:translateY(0); }
 
-    .drawer-handle { width:40px; height:4px; background:var(--border); border-radius:4px; margin:14px auto 0; flex-shrink:0; }
+    .overlay.open .drawer {
+      transform: translateY(0);
+    }
 
-    .drawer-header { padding:16px 26px 0; display:flex; align-items:flex-start; gap:14px; flex-shrink:0; }
-    .drawer-icon { width:50px; height:50px; border-radius:14px; overflow:hidden; display:flex; align-items:center; justify-content:center; flex-shrink:0; background:var(--rose-pale); }
-    .drawer-icon img { width:100%; height:100%; object-fit:contain; }
-    .drawer-meta { flex:1; }
-    .drawer-title { font-family:'DM Serif Display',serif; font-size:19px; color:var(--text-primary); letter-spacing:-.3px; line-height:1.15; }
-    .drawer-year { font-size:11px; color:var(--text-muted); margin-top:2px; text-transform:uppercase; letter-spacing:.4px; }
-    .drawer-close { width:34px; height:34px; border-radius:10px; background:var(--bg); border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--text-secondary); transition:all .2s; flex-shrink:0; }
-    .drawer-close:hover { background:var(--rose-pale); color:var(--rose); }
-    .drawer-close svg { width:15px; height:15px; }
+    .drawer-handle {
+      width: 40px;
+      height: 4px;
+      background: var(--border);
+      border-radius: 4px;
+      margin: 14px auto 0;
+      flex-shrink: 0;
+    }
 
-    .status-pill { display:inline-flex; align-items:center; font-size:10.5px; font-weight:500; padding:3px 10px; border-radius:20px; margin-top:5px; }
-    .status-pill.live     { background:rgba(92,201,139,.12); color:#3A9E68; border:1px solid rgba(92,201,139,.3); }
-    .status-pill.finished { background:var(--rose-pale); color:var(--rose-deep); border:1px solid var(--rose-light); }
-    .status-pill.wip      { background:rgba(232,180,50,.12); color:#B88A00; border:1px solid rgba(232,180,50,.3); }
+    .drawer-header {
+      padding: 16px 26px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      flex-shrink: 0;
+    }
 
-    .drawer-body { padding:16px 26px 26px; overflow-y:auto; flex:1; display:flex; flex-direction:column; gap:16px; scrollbar-width:thin; scrollbar-color:var(--rose-light) transparent; }
-    .drawer-body::-webkit-scrollbar { width:3px; }
-    .drawer-body::-webkit-scrollbar-thumb { background:var(--rose-light); border-radius:10px; }
+    .drawer-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: var(--rose-pale);
+    }
+
+    .drawer-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .drawer-meta {
+      flex: 1;
+    }
+
+    .drawer-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 19px;
+      color: var(--text-primary);
+      letter-spacing: -.3px;
+      line-height: 1.15;
+    }
+
+    .drawer-year {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+
+    .drawer-close {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: var(--bg);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      transition: all .2s;
+      flex-shrink: 0;
+    }
+
+    .drawer-close:hover {
+      background: var(--rose-pale);
+      color: var(--rose);
+    }
+
+    .drawer-close svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      font-size: 10.5px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-top: 5px;
+    }
+
+    .status-pill.live {
+      background: rgba(92, 201, 139, .12);
+      color: #3A9E68;
+      border: 1px solid rgba(92, 201, 139, .3);
+    }
+
+    .status-pill.finished {
+      background: var(--rose-pale);
+      color: var(--rose-deep);
+      border: 1px solid var(--rose-light);
+    }
+
+    .status-pill.wip {
+      background: rgba(232, 180, 50, .12);
+      color: #B88A00;
+      border: 1px solid rgba(232, 180, 50, .3);
+    }
+
+    .drawer-body {
+      padding: 16px 26px 26px;
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--rose-light) transparent;
+    }
+
+    .drawer-body::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    .drawer-body::-webkit-scrollbar-thumb {
+      background: var(--rose-light);
+      border-radius: 10px;
+    }
 
     /* Video */
-    .d-label { font-size:10.5px; font-weight:500; color:var(--text-muted); text-transform:uppercase; letter-spacing:.6px; margin-bottom:8px; }
-    .video-wrap { position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--border); background:#1A1012; aspect-ratio:16/9; }
-    .video-wrap iframe, .video-wrap video { position:absolute; inset:0; width:100%; height:100%; border:none; }
-    .video-placeholder { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; background:linear-gradient(135deg,#2C1A1C,#1A1012); }
-    .play-ring { width:56px; height:56px; border-radius:50%; background:var(--rose); display:flex; align-items:center; justify-content:center; box-shadow:0 0 0 12px rgba(232,130,138,.15); }
-    .play-ring svg { width:20px; height:20px; margin-left:3px; }
-    .video-placeholder span { font-size:12px; color:rgba(255,255,255,.45); }
+    .d-label {
+      font-size: 10.5px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      margin-bottom: 8px;
+    }
+
+    .video-wrap {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #1A1012;
+      aspect-ratio: 16/9;
+    }
+
+    .video-wrap iframe,
+    .video-wrap video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #2C1A1C, #1A1012);
+    }
+
+    .play-ring {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--rose);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 12px rgba(232, 130, 138, .15);
+    }
+
+    .play-ring svg {
+      width: 20px;
+      height: 20px;
+      margin-left: 3px;
+    }
+
+    .video-placeholder span {
+      font-size: 12px;
+      color: rgba(255, 255, 255, .45);
+    }
 
     /* Stack */
-    .stack-tags { display:flex; gap:6px; flex-wrap:wrap; }
-    .s-tag { font-size:11px; font-weight:500; padding:4px 11px; border-radius:20px; background:var(--bg); color:var(--rose-deep); border:1px solid var(--rose-light); }
+    .stack-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .s-tag {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 11px;
+      border-radius: 20px;
+      background: var(--bg);
+      color: var(--rose-deep);
+      border: 1px solid var(--rose-light);
+    }
 
     /* Desc */
-    .d-desc { font-size:13px; color:var(--text-secondary); line-height:1.72; }
+    .d-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.72;
+    }
 
     /* Acciones */
-    .action-row { display:flex; gap:10px; flex-wrap:wrap; }
-    .action-btn { display:inline-flex; align-items:center; gap:8px; padding:11px 20px; border-radius:13px; border:none; font-family:'DM Sans',sans-serif; font-size:13px; font-weight:500; cursor:pointer; transition:all .22s; text-decoration:none; }
-    .action-btn svg { width:15px; height:15px; }
-    .action-btn.github { background:#1A1012; color:white; box-shadow:0 4px 14px rgba(26,16,18,.2); }
-    .action-btn.github:hover { background:#2C2325; transform:translateY(-1px); }
-    .action-btn.demo { background:var(--rose); color:white; box-shadow:0 4px 14px rgba(232,130,138,.3); }
-    .action-btn.demo:hover { background:var(--rose-deep); transform:translateY(-1px); }
-    .action-btn.muted { background:var(--bg); color:var(--text-muted); border:1.5px solid var(--border); cursor:default; }
+    .action-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-    .d-divider { height:1px; background:var(--border); }
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 13px;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .22s;
+      text-decoration: none;
+    }
+
+    .action-btn svg {
+      width: 15px;
+      height: 15px;
+    }
+
+    .action-btn.github {
+      background: #1A1012;
+      color: white;
+      box-shadow: 0 4px 14px rgba(26, 16, 18, .2);
+    }
+
+    .action-btn.github:hover {
+      background: #2C2325;
+      transform: translateY(-1px);
+    }
+
+    .action-btn.demo {
+      background: var(--rose);
+      color: white;
+      box-shadow: 0 4px 14px rgba(232, 130, 138, .3);
+    }
+
+    .action-btn.demo:hover {
+      background: var(--rose-deep);
+      transform: translateY(-1px);
+    }
+
+    .action-btn.muted {
+      background: var(--bg);
+      color: var(--text-muted);
+      border: 1.5px solid var(--border);
+      cursor: default;
+    }
+
+    .d-divider {
+      height: 1px;
+      background: var(--border);
+    }
   </style>
 </head>
 
 <body>
-<div class="app">
+  <div class="app">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="sidebar-logo">
-      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-    </div>
-    <div class="nav-btn active" data-view="home" title="Inicio">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
-    </div>
-    <div class="nav-btn" data-view="perfil" title="Perfil">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-    </div>
-    <div class="nav-btn" data-view="proyectos" title="Proyectos">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-    </div>
-    <div class="nav-btn" data-view="certificados" title="Certificados">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-    </div>
-  </aside>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        </svg>
+      </div>
+      <div class="nav-btn active" data-view="home" title="Inicio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9,22 9,12 15,12 15,22" />
+        </svg>
+      </div>
+      <div class="nav-btn" data-view="perfil" title="Perfil">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+      </div>
+      <div class="nav-btn" data-view="proyectos" title="Proyectos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7" />
+          <rect x="14" y="3" width="7" height="7" />
+          <rect x="14" y="14" width="7" height="7" />
+          <rect x="3" y="14" width="7" height="7" />
+        </svg>
+      </div>
+      <div class="nav-btn" data-view="certificados" title="Certificados">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <circle cx="12" cy="8" r="6" />
+          <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+        </svg>
+      </div>
+    </aside>
 
-  <!-- MAIN -->
-  <main class="main">
-    <div class="topbar">
-      <div class="page-label" id="page-label">Inicio</div>
-    </div>
+    <!-- MAIN -->
+    <main class="main">
+      <div class="topbar">
+        <div class="page-label" id="page-label">Inicio</div>
+      </div>
 
-    <!-- HOME -->
-    <div style="margin-top:40px" class="view active" id="view-home">
-      <div class="home-content">
-        <div class="home-hero">
-          <div class="home-greeting">Bienvenido/a a mi portafolio</div>
-          <div class="home-title">Hola, soy Katerin<br><span>Diseño + Código + Ciberseguridad</span></div>
-          <div class="home-desc">Estudiante de Ingeniería de Sistemas con pasión por el desarrollo web, la ciberseguridad y el diseño de experiencias digitales.</div>
-          <button class="home-cta" onclick="document.querySelector('[data-view=proyectos]').click()">
-            Ver proyectos
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-        </div>
-        <div class="home-stats">
-          <div class="home-stat-card"><div class="home-stat-num">9°</div><div class="home-stat-lbl">Semestre</div></div>
-          <div class="home-stat-card"><div class="home-stat-num">6+</div><div class="home-stat-lbl">Proyectos</div></div>
-          <div class="home-stat-card"><div class="home-stat-num">3+</div><div class="home-stat-lbl">Certificados</div></div>
-        </div>
-        <div class="home-recent">
-          <div class="home-recent-title">Actividad reciente</div>
-          <div class="recent-list">
-            <div class="recent-item"><div class="recent-dot"></div><div class="recent-text">Portafolio personal actualizado</div><div class="recent-meta">Hoy</div></div>
-            <div class="recent-item"><div class="recent-dot" style="background:var(--rose-light)"></div><div class="recent-text">Certificado Cloud Computing añadido</div><div class="recent-meta">Esta semana</div></div>
-            <div class="recent-item"><div class="recent-dot" style="background:var(--rose-light)"></div><div class="recent-text">Proyecto Django desplegado</div><div class="recent-meta">Este mes</div></div>
+      <!-- HOME -->
+      <div style="margin-top:40px" class="view active" id="view-home">
+        <div class="home-content">
+          <div class="home-hero">
+            <div class="home-greeting">Bienvenido/a a mi portafolio</div>
+            <div class="home-title">Hola, soy Katerin<br><span>Diseño + Código + Ciberseguridad</span></div>
+            <div class="home-desc">Estudiante de Ingeniería de Sistemas con pasión por el desarrollo web, la
+              ciberseguridad y el diseño de experiencias digitales.</div>
+            <button class="home-cta" onclick="document.querySelector('[data-view=proyectos]').click()">
+              Ver proyectos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          </div>
+          <div class="home-stats">
+            <div class="home-stat-card">
+              <div class="home-stat-num">9°</div>
+              <div class="home-stat-lbl">Semestre</div>
+            </div>
+            <div class="home-stat-card">
+              <div class="home-stat-num">6+</div>
+              <div class="home-stat-lbl">Proyectos</div>
+            </div>
+            <div class="home-stat-card">
+              <div class="home-stat-num">3+</div>
+              <div class="home-stat-lbl">Certificados</div>
+            </div>
+          </div>
+          <div class="home-recent">
+            <div class="home-recent-title">Actividad reciente</div>
+            <div class="recent-list">
+              <div class="recent-item">
+                <div class="recent-dot"></div>
+                <div class="recent-text">Portafolio personal actualizado</div>
+                <div class="recent-meta">Hoy</div>
+              </div>
+              <div class="recent-item">
+                <div class="recent-dot" style="background:var(--rose-light)"></div>
+                <div class="recent-text">Certificado Cloud Computing añadido</div>
+                <div class="recent-meta">Esta semana</div>
+              </div>
+              <div class="recent-item">
+                <div class="recent-dot" style="background:var(--rose-light)"></div>
+                <div class="recent-text">Proyecto Django desplegado</div>
+                <div class="recent-meta">Este mes</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- PERFIL -->
-    <div style="margin-top:40px" class="view" id="view-perfil">
-      <div class="bio-section">
-        <div class="bio-card">
-          <div class="avatar-wrap">
-            <div class="avatar-ring" style="width:160px;height:200px">
-              <img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/Foto.png" style="width:160px" alt="Yuliet Katerin" onerror="this.parentElement.innerHTML='🌸'">
+      <!-- PERFIL -->
+      <div style="margin-top:40px" class="view" id="view-perfil">
+        <div class="bio-section">
+          <div class="bio-card">
+            <div class="avatar-wrap">
+              <div class="avatar-ring" style="width:160px;height:200px">
+                <img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/Foto.png" style="width:160px"
+                  alt="Yuliet Katerin" onerror="this.parentElement.innerHTML='🌸'">
+              </div>
+              <div class="status-dot"></div>
             </div>
-            <div class="status-dot"></div>
+            <div class="bio-content">
+              <div class="bio-name">Yuliet Katerin Espitia Ayala</div>
+              <div class="bio-role">Estudiante de Ingeniería de Sistemas · Universidad San Buenaventura</div>
+              <div class="bio-text">Apasionada por crear experiencias digitales donde el diseño y el código se
+                encuentran. Transformo ideas en interfaces funcionales, bonitas, accesibles y seguras. Estudiante de
+                noveno semestre, me encanta el desarrollo y diseño web.</div>
+              <div class="bio-tags">
+                <span class="tag">Frontend</span><span class="tag">Backend</span>
+                <span class="tag">Ciberseguridad</span><span class="tag">Cloud</span>
+                <span class="tag">Análisis de Datos</span>
+              </div>
+            </div>
           </div>
-          <div class="bio-content">
-            <div class="bio-name">Yuliet Katerin Espitia Ayala</div>
-            <div class="bio-role">Estudiante de Ingeniería de Sistemas · Universidad San Buenaventura</div>
-            <div class="bio-text">Apasionada por crear experiencias digitales donde el diseño y el código se encuentran. Transformo ideas en interfaces funcionales, bonitas, accesibles y seguras. Estudiante de noveno semestre, me encanta el desarrollo y diseño web.</div>
-            <div class="bio-tags">
-              <span class="tag">Frontend</span><span class="tag">Backend</span>
-              <span class="tag">Ciberseguridad</span><span class="tag">Cloud</span>
-              <span class="tag">Análisis de Datos</span>
+        </div>
+        <div class="skills-section">
+          <div style="margin-top:10px" class="section-title">Habilidades &amp; Stack</div>
+          <div class="skills-grid">
+            <div style="margin-top:10px" class="skill-card"><img
+                src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/Py.png"
+                onerror="this.outerHTML='<span style=font-size:20px>🐍</span>'">
+              <div class="skill-name">Python · PyQt · Streamlit</div>
+            </div>
+            <div style="margin-top:10px" class="skill-card"><img
+                src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/java.png"
+                onerror="this.outerHTML='<span style=font-size:20px>☕</span>'">
+              <div class="skill-name">Java · JSP · Servlets</div>
+            </div>
+            <div class="skill-card"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/ht.png"
+                onerror="this.outerHTML='<span style=font-size:20px>🌐</span>'">
+              <div class="skill-name">HTML / CSS</div>
+            </div>
+            <div class="skill-card"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/SQL.png"
+                onerror="this.outerHTML='<span style=font-size:20px>🗄️</span>'">
+              <div class="skill-name">SQL</div>
+            </div>
+            <div class="skill-card"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/react.png"
+                onerror="this.outerHTML='<span style=font-size:20px>⚛️</span>'">
+              <div class="skill-name">React</div>
+            </div>
+            <div class="skill-card"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/type.webp"
+                style="border-radius:8px" onerror="this.outerHTML='<span style=font-size:20px>📘</span>'">
+              <div class="skill-name">TypeScript</div>
+            </div>
+            <div class="skill-card"><img
+                src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/djando.png"
+                onerror="this.outerHTML='<span style=font-size:20px>🦄</span>'">
+              <div class="skill-name">Django</div>
+            </div>
+            <div class="skill-card"><img
+                src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/kotlin.png"
+                onerror="this.outerHTML='<span style=font-size:20px>🟣</span>'">
+              <div class="skill-name">Kotlin</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="skills-section">
-        <div style="margin-top:10px" class="section-title">Habilidades &amp; Stack</div>
-        <div class="skills-grid">
-          <div style="margin-top:10px" class="skill-card"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/Py.png" onerror="this.outerHTML='<span style=font-size:20px>🐍</span>'"><div class="skill-name">Python · PyQt · Streamlit</div></div>
-          <div style="margin-top:10px" class="skill-card"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/java.png" onerror="this.outerHTML='<span style=font-size:20px>☕</span>'"><div class="skill-name">Java · JSP · Servlets</div></div>
-          <div class="skill-card"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/ht.png" onerror="this.outerHTML='<span style=font-size:20px>🌐</span>'"><div class="skill-name">HTML / CSS</div></div>
-          <div class="skill-card"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/SQL.png" onerror="this.outerHTML='<span style=font-size:20px>🗄️</span>'"><div class="skill-name">SQL</div></div>
-          <div class="skill-card"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/react.png" onerror="this.outerHTML='<span style=font-size:20px>⚛️</span>'"><div class="skill-name">React</div></div>
-          <div class="skill-card"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/type.webp" style="border-radius:8px" onerror="this.outerHTML='<span style=font-size:20px>📘</span>'"><div class="skill-name">TypeScript</div></div>
-          <div class="skill-card"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/djando.png" onerror="this.outerHTML='<span style=font-size:20px>🦄</span>'"><div class="skill-name">Django</div></div>
-          <div class="skill-card"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/kotlin.png" onerror="this.outerHTML='<span style=font-size:20px>🟣</span>'"><div class="skill-name">Kotlin</div></div>
-        </div>
-      </div>
-    </div>
 
-    <!-- PROYECTOS -->
-    <div style="margin-top:10px" class="view" id="view-proyectos">
-      <div class="projects-content">
-        <div class="bio-card">
-          <div class="bio-content">
-            <div style="font-size:20px;color:#E8828A" class="home-title">Mis proyectos</div>
-          </div>
-        </div>
-        <div class="projects-grid">
-
-          <div style="margin-top:10px" class="project-card" onclick="openDrawer('agenda-movil')">
-            <div class="project-thumb" style="background:#FCEEF0"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/TareasLogo.png" alt="" style="width:120px"></div>
-            <div class="project-body">
-              <div class="project-name">App Móvil agenda estudiantil</div>
-              <div class="project-desc">CRUD para gestión académica con exámenes, tareas y calendario. Frontend Kotlin, backend Java + PHP.</div>
-              <div class="project-tags"><span class="p-tag">Kotlin</span><span class="p-tag">Java</span><span class="p-tag">XAMPP</span><span class="p-tag">MySQL</span></div>
-            </div>
-            <div class="project-footer">
-              <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+      <!-- PROYECTOS -->
+      <div style="margin-top:10px" class="view" id="view-proyectos">
+        <div class="projects-content">
+          <div class="bio-card">
+            <div class="bio-content">
+              <div style="font-size:20px;color:#E8828A" class="home-title">Mis proyectos</div>
             </div>
           </div>
+          <div class="projects-grid">
 
-          <div style="margin-top:10px" class="project-card" onclick="openDrawer('iso')">
-            <div class="project-thumb" style="background:#FCEEF0"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/IsoLogo.png" alt="" style="width:120px"></div>
-            <div class="project-body">
-              <div class="project-name">Herramienta auditoría ISO 27001</div>
-              <div class="project-desc">CRUD para checklist de controles ISO 27001 con reportes en Excel, PDF y dashboards.</div>
-              <div class="project-tags"><span class="p-tag">Python</span><span class="p-tag">Django</span><span class="p-tag">ISO 27001</span></div>
+            <div style="margin-top:10px" class="project-card" onclick="openDrawer('agenda-movil')">
+              <div class="project-thumb" style="background:#FCEEF0"><img
+                  src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/TareasLogo.png" alt=""
+                  style="width:120px"></div>
+              <div class="project-body">
+                <div class="project-name">App Móvil agenda estudiantil</div>
+                <div class="project-desc">CRUD para gestión académica con exámenes, tareas y calendario. Frontend
+                  Kotlin, backend Java + PHP.</div>
+                <div class="project-tags"><span class="p-tag">Kotlin</span><span class="p-tag">Java</span><span
+                    class="p-tag">XAMPP</span><span class="p-tag">MySQL</span></div>
+              </div>
+              <div class="project-footer">
+                <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg></button>
+              </div>
             </div>
-            <div class="project-footer">
-              <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+
+            <div style="margin-top:10px" class="project-card" onclick="openDrawer('iso')">
+              <div class="project-thumb" style="background:#FCEEF0"><img
+                  src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/IsoLogo.png" alt=""
+                  style="width:120px"></div>
+              <div class="project-body">
+                <div class="project-name">Herramienta auditoría ISO 27001</div>
+                <div class="project-desc">CRUD para checklist de controles ISO 27001 con reportes en Excel, PDF y
+                  dashboards.</div>
+                <div class="project-tags"><span class="p-tag">Python</span><span class="p-tag">Django</span><span
+                    class="p-tag">ISO 27001</span></div>
+              </div>
+              <div class="project-footer">
+                <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg></button>
+
+                <button class="project-link" onclick="window.open('https://tu-enlace.com', '_blank')"
+                  style="color: var(--rose-deep);">
+                  Ver app
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </button>
+              </div>
             </div>
+
+            <div class="project-card" onclick="openDrawer('agenda')">
+              <div class="project-thumb" style="background:#FCEEF0"><img
+                  src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/AgendaLog.png" alt=""
+                  style="width:120px"></div>
+              <div class="project-body">
+                <div class="project-name">Agenda de Actividades</div>
+                <div class="project-desc">Aplicación web desarrollada con arquitectura MVC que permite gestionar
+                  actividades, usuarios y permisos.</div>
+                <div class="project-tags"><span class="p-tag">Java</span><span class="p-tag">JSP</span><span
+                    class="p-tag">HTML</span><span class="p-tag">CSS</span><span class="p-tag">SQL Workbench</span><span
+                    class="p-tag">MVC</span></div>
+              </div>
+              <div class="project-footer">
+                <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg></button>
+              </div>
+            </div>
+
+            <div class="project-card" onclick="openDrawer('emulador')">
+              <div class="project-thumb" style="background:#FCEEF0"><img
+                  src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/EmuLogo.png" alt=""
+                  style="width:120px"></div>
+              <div class="project-body">
+                <div class="project-name">Emulador de juegos</div>
+                <div class="project-desc">Emulador de juegos desarrollados por librerías como Pygame y TKinter.</div>
+                <div class="project-tags"><span class="p-tag">Python</span><span class="p-tag">PyQt5</span><span
+                    class="p-tag">QtDesigner</span><span class="p-tag">PyGame</span><span class="p-tag">TKinter</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg></button>
+              </div>
+            </div>
+
+            <div class="project-card" onclick="openDrawer('ods14')">
+              <div class="project-thumb" style="background:#FCEEF0"><img
+                  src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/AprenLogo.png" alt=""
+                  style="width:120px"></div>
+              <div class="project-body">
+                <div class="project-name">App móvil lecciones ODS 14 Vida Submarina</div>
+                <div class="project-desc">Aplicación desarrollada en React para el aprendizaje de la vida marítima y el
+                  ODS 14 de la ONU.</div>
+                <div class="project-tags"><span class="p-tag">Python</span><span class="p-tag">Django</span><span
+                    class="p-tag">ExpoGO</span></div>
+              </div>
+              <div class="project-footer">
+                <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg></button>
+              </div>
+            </div>
+
+            <div class="project-card" onclick="openDrawer('dashboard')">
+              <div class="project-thumb" style="background:#FCEEF0"><img
+                  src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/GestLogo.png" alt=""
+                  style="width:120px"></div>
+              <div class="project-body">
+                <div class="project-name">Dashboard — Gestión de seguridad</div>
+                <div class="project-desc">Dashboard de gestión de seguridad basado en normas ISO para activos de una app
+                  de agenda.</div>
+                <div class="project-tags"><span class="p-tag">HTML</span><span class="p-tag">CSS</span></div>
+              </div>
+              <div class="project-footer">
+                <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg></button>
+              </div>
+            </div>
+
+            <div class="project-card" onclick="openDrawer('lengua')">
+              <div class="project-thumb" style="background:#FCEEF0"><img
+                  src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/LengLogo.png" alt=""
+                  style="width:120px"></div>
+              <div class="project-body">
+                <div class="project-name">Programa lengua de señas Colombiana</div>
+                <div class="project-desc">Programa con categorías para el aprendizaje de palabras básicas y abecedario
+                  en LSC.</div>
+                <div class="project-tags"><span class="p-tag">Python</span><span class="p-tag">PyQt5</span><span
+                    class="p-tag">QtDesigner</span></div>
+              </div>
+              <div class="project-footer">
+                <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg></button>
+              </div>
+            </div>
+
           </div>
-
-          <div class="project-card" onclick="openDrawer('agenda')">
-            <div class="project-thumb" style="background:#FCEEF0"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/AgendaLog.png" alt="" style="width:120px"></div>
-            <div class="project-body">
-              <div class="project-name">Agenda de Actividades</div>
-              <div class="project-desc">Aplicación web desarrollada con arquitectura MVC que permite gestionar actividades, usuarios y permisos.</div>
-              <div class="project-tags"><span class="p-tag">Java</span><span class="p-tag">JSP</span><span class="p-tag">HTML</span><span class="p-tag">CSS</span><span class="p-tag">SQL Workbench</span><span class="p-tag">MVC</span></div>
-            </div>
-            <div class="project-footer">
-              <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
-            </div>
-          </div>
-
-          <div class="project-card" onclick="openDrawer('emulador')">
-            <div class="project-thumb" style="background:#FCEEF0"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/EmuLogo.png" alt="" style="width:120px"></div>
-            <div class="project-body">
-              <div class="project-name">Emulador de juegos</div>
-              <div class="project-desc">Emulador de juegos desarrollados por librerías como Pygame y TKinter.</div>
-              <div class="project-tags"><span class="p-tag">Python</span><span class="p-tag">PyQt5</span><span class="p-tag">QtDesigner</span><span class="p-tag">PyGame</span><span class="p-tag">TKinter</span></div>
-            </div>
-            <div class="project-footer">
-              <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
-            </div>
-          </div>
-
-          <div class="project-card" onclick="openDrawer('ods14')">
-            <div class="project-thumb" style="background:#FCEEF0"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/AprenLogo.png" alt="" style="width:120px"></div>
-            <div class="project-body">
-              <div class="project-name">App móvil lecciones ODS 14 Vida Submarina</div>
-              <div class="project-desc">Aplicación desarrollada en React para el aprendizaje de la vida marítima y el ODS 14 de la ONU.</div>
-              <div class="project-tags"><span class="p-tag">Python</span><span class="p-tag">Django</span><span class="p-tag">ExpoGO</span></div>
-            </div>
-            <div class="project-footer">
-              <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
-            </div>
-          </div>
-
-          <div class="project-card" onclick="openDrawer('dashboard')">
-            <div class="project-thumb" style="background:#FCEEF0"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/GestLogo.png" alt="" style="width:120px"></div>
-            <div class="project-body">
-              <div class="project-name">Dashboard — Gestión de seguridad</div>
-              <div class="project-desc">Dashboard de gestión de seguridad basado en normas ISO para activos de una app de agenda.</div>
-              <div class="project-tags"><span class="p-tag">HTML</span><span class="p-tag">CSS</span></div>
-            </div>
-            <div class="project-footer">
-              <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
-            </div>
-          </div>
-
-          <div class="project-card" onclick="openDrawer('lengua')">
-            <div class="project-thumb" style="background:#FCEEF0"><img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/LengLogo.png" alt="" style="width:120px"></div>
-            <div class="project-body">
-              <div class="project-name">Programa lengua de señas Colombiana</div>
-              <div class="project-desc">Programa con categorías para el aprendizaje de palabras básicas y abecedario en LSC.</div>
-              <div class="project-tags"><span class="p-tag">Python</span><span class="p-tag">PyQt5</span><span class="p-tag">QtDesigner</span></div>
-            </div>
-            <div class="project-footer">
-              <button class="project-link">Ver proyecto <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
-            </div>
-          </div>
-
         </div>
       </div>
-    </div>
 
-    <!-- CERTIFICADOS -->
-    <div style="margin-top:20px" class="view" id="view-certificados">
-      <div style="margin:0 26px" class="home-hero">
-        <div class="home-title" style="font-size:20px;margin:0"><span>Mis certificados</span></div>
-      </div>
-      <div class="certs-content">
-        <div class="cert-card">
-          <img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/Cert1.png" style="width:400px;border-radius:10px;flex-shrink:0">
-          <div class="cert-info"><div class="cert-name">Certificado de analítica de datos</div><div class="cert-issuer">IBM · Skillsbuild</div></div>
-          <div class="cert-meta"><span class="cert-year">2025</span><span class="cert-badge">Verificado</span></div>
+      <!-- CERTIFICADOS -->
+      <div style="margin-top:20px" class="view" id="view-certificados">
+        <div style="margin:0 26px" class="home-hero">
+          <div class="home-title" style="font-size:20px;margin:0"><span>Mis certificados</span></div>
         </div>
-        <div class="cert-card">
-          <img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/Cert2.png" style="width:400px;border-radius:10px;flex-shrink:0">
-          <div class="cert-info"><div class="cert-name">Ciberseguridad y desarrollo web</div><div class="cert-issuer">IBM · Skillsbuild</div></div>
-          <div class="cert-meta"><span class="cert-year">2025</span><span class="cert-badge">Verificado</span></div>
-        </div>
-        <div class="cert-card">
-          <img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/Cert3.png" style="width:400px;border-radius:10px;flex-shrink:0">
-          <div class="cert-info"><div class="cert-name">Ciberseguridad de Google</div><div class="cert-issuer">Google · Coursera</div></div>
-          <div class="cert-meta"><span class="cert-year">2025</span><span class="cert-badge">Verificado</span></div>
-        </div>
-        <div class="cert-card">
-          <img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/Cert4.png" style="width:400px;border-radius:10px;flex-shrink:0">
-          <div class="cert-info"><div class="cert-name">Excel intermedio</div><div class="cert-issuer">SENA</div></div>
-          <div class="cert-meta"><span class="cert-year">2022</span><span class="cert-badge">Verificado</span></div>
-        </div>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- PANEL -->
-  <aside class="panel">
-    <div class="panel-header">
-      <div class="panel-title">Contacto</div>
-      <div class="avail-badge"><div class="avail-dot"></div><span class="avail-text">Puedes contactarme aquí:</span></div>
-    </div>
-    <div class="contact-list">
-      <a class="contact-item" href="mailto:katherineee12365@gmail.com">
-        <div class="contact-icon" style="background:#FDF0F1"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E8828A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-        <div class="contact-text"><div class="contact-label">Email</div><div class="contact-value">katherineee12365@gmail.com</div></div>
-        <div class="contact-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></div>
-      </a>
-      <a class="contact-item" href="https://linkedin.com/in/katerin-espitia-ayala" target="_blank">
-        <div class="contact-icon" style="background:#EEF5FF"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#4A90D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-        <div class="contact-text"><div class="contact-label">LinkedIn</div><div class="contact-value">katerin-espitia-ayala</div></div>
-        <div class="contact-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></div>
-      </a>
-      <a class="contact-item" href="https://github.com/yulkatesp" target="_blank">
-        <div class="contact-icon" style="background:#F4F4F4"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
-        <div class="contact-text"><div class="contact-label">GitHub</div><div class="contact-value">github.com/yulkatesp</div></div>
-        <div class="contact-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></div>
-      </a>
-      <a class="contact-item" href="tel:+573107798772">
-        <div class="contact-icon" style="background:#EEFAF3"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#3AAA72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.86-1.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-        <div class="contact-text"><div class="contact-label">Teléfono</div><div class="contact-value">+57 310 779 8772</div></div>
-        <div class="contact-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></div>
-      </a>
-      <div class="contact-item" style="cursor:default">
-        <div class="contact-icon" style="background:#FDF0F1"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#E8828A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div class="contact-text"><div class="contact-label">Ubicación</div><div class="contact-value">Bogotá, Colombia</div></div>
-      </div>
-    </div>
-    <div class="panel-footer">
-      <div class="location-chip">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        Zona horaria: UTC−5 · Bogotá
-      </div>
-    </div>
-    <div class="cv-btn-wrap">
-      <button class="cv-btn" onclick="alert('¡Aquí iría tu CV!')">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Descargar CV
-      </button>
-    </div>
-  </aside>
-</div>
-
-<!-- ══ DRAWER ══ -->
-<div class="overlay" id="overlay" onclick="handleOverlayClick(event)">
-  <div class="drawer">
-    <div class="drawer-handle"></div>
-    <div class="drawer-header">
-      <div class="drawer-icon" id="d-icon"></div>
-      <div class="drawer-meta">
-        <div class="drawer-title" id="d-title"></div>
-        <div class="drawer-year"  id="d-year"></div>
-        <div id="d-status"></div>
-      </div>
-      <button class="drawer-close" onclick="closeDrawer()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-    <div class="drawer-body">
-      <div>
-        <div class="d-label">Demo del proyecto</div>
-        <div class="video-wrap" id="d-video">
-
+        <div class="certs-content">
+          <div class="cert-card">
+            <img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/Cert1.png"
+              style="width:400px;border-radius:10px;flex-shrink:0">
+            <div class="cert-info">
+              <div class="cert-name">Certificado de analítica de datos</div>
+              <div class="cert-issuer">IBM · Skillsbuild</div>
+            </div>
+            <div class="cert-meta"><span class="cert-year">2025</span><span class="cert-badge">Verificado</span></div>
+          </div>
+          <div class="cert-card">
+            <img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/Cert2.png"
+              style="width:400px;border-radius:10px;flex-shrink:0">
+            <div class="cert-info">
+              <div class="cert-name">Ciberseguridad y desarrollo web</div>
+              <div class="cert-issuer">IBM · Skillsbuild</div>
+            </div>
+            <div class="cert-meta"><span class="cert-year">2025</span><span class="cert-badge">Verificado</span></div>
+          </div>
+          <div class="cert-card">
+            <img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/Cert3.png"
+              style="width:400px;border-radius:10px;flex-shrink:0">
+            <div class="cert-info">
+              <div class="cert-name">Ciberseguridad de Google</div>
+              <div class="cert-issuer">Google · Coursera</div>
+            </div>
+            <div class="cert-meta"><span class="cert-year">2025</span><span class="cert-badge">Verificado</span></div>
+          </div>
+          <div class="cert-card">
+            <img src="https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/Cert4.png"
+              style="width:400px;border-radius:10px;flex-shrink:0">
+            <div class="cert-info">
+              <div class="cert-name">Excel intermedio</div>
+              <div class="cert-issuer">SENA</div>
+            </div>
+            <div class="cert-meta"><span class="cert-year">2022</span><span class="cert-badge">Verificado</span></div>
+          </div>
         </div>
       </div>
-      <div class="d-divider"></div>
-      <div>
-        <div class="d-label">Descripción</div>
-        <div class="d-desc" id="d-desc"></div>
+
+    </main>
+
+    <!-- PANEL -->
+    <aside class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Contacto</div>
+        <div class="avail-badge">
+          <div class="avail-dot"></div><span class="avail-text">Puedes contactarme aquí:</span>
+        </div>
       </div>
-      <div>
-        <div class="d-label">Stack tecnológico</div>
-        <div class="stack-tags" id="d-stack"></div>
+      <div class="contact-list">
+        <a class="contact-item" href="mailto:katherineee12365@gmail.com">
+          <div class="contact-icon" style="background:#FDF0F1"><svg width="17" height="17" viewBox="0 0 24 24"
+              fill="none" stroke="#E8828A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg></div>
+          <div class="contact-text">
+            <div class="contact-label">Email</div>
+            <div class="contact-value">katherineee12365@gmail.com</div>
+          </div>
+          <div class="contact-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg></div>
+        </a>
+        <a class="contact-item" href="https://linkedin.com/in/katerin-espitia-ayala" target="_blank">
+          <div class="contact-icon" style="background:#EEF5FF"><svg width="17" height="17" viewBox="0 0 24 24"
+              fill="none" stroke="#4A90D9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg></div>
+          <div class="contact-text">
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value">katerin-espitia-ayala</div>
+          </div>
+          <div class="contact-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg></div>
+        </a>
+        <a class="contact-item" href="https://github.com/yulkatesp" target="_blank">
+          <div class="contact-icon" style="background:#F4F4F4"><svg width="17" height="17" viewBox="0 0 24 24"
+              fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg></div>
+          <div class="contact-text">
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">github.com/yulkatesp</div>
+          </div>
+          <div class="contact-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg></div>
+        </a>
+        <a class="contact-item" href="tel:+573107798772">
+          <div class="contact-icon" style="background:#EEFAF3"><svg width="17" height="17" viewBox="0 0 24 24"
+              fill="none" stroke="#3AAA72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.86-1.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg></div>
+          <div class="contact-text">
+            <div class="contact-label">Teléfono</div>
+            <div class="contact-value">+57 310 779 8772</div>
+          </div>
+          <div class="contact-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg></div>
+        </a>
+        <div class="contact-item" style="cursor:default">
+          <div class="contact-icon" style="background:#FDF0F1"><svg width="17" height="17" viewBox="0 0 24 24"
+              fill="none" stroke="#E8828A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg></div>
+          <div class="contact-text">
+            <div class="contact-label">Ubicación</div>
+            <div class="contact-value">Bogotá, Colombia</div>
+          </div>
+        </div>
       </div>
-      <div class="d-divider"></div>
-      <div class="action-row" id="d-actions"></div>
+      <div class="panel-footer">
+        <div class="location-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          Zona horaria: UTC−5 · Bogotá
+        </div>
+      </div>
+      <div class="cv-btn-wrap">
+        <button class="cv-btn" onclick="alert('¡Aquí iría tu CV!')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Descargar CV
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ══ DRAWER ══ -->
+  <div class="overlay" id="overlay" onclick="handleOverlayClick(event)">
+    <div class="drawer">
+      <div class="drawer-handle"></div>
+      <div class="drawer-header">
+        <div class="drawer-icon" id="d-icon"></div>
+        <div class="drawer-meta">
+          <div class="drawer-title" id="d-title"></div>
+          <div class="drawer-year" id="d-year"></div>
+          <div id="d-status"></div>
+        </div>
+        <button class="drawer-close" onclick="closeDrawer()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div class="drawer-body">
+        <div>
+          <div class="d-label">Demo del proyecto</div>
+          <div class="video-wrap" id="d-video">
+
+          </div>
+        </div>
+        <div class="d-divider"></div>
+        <div>
+          <div class="d-label">Descripción</div>
+          <div class="d-desc" id="d-desc"></div>
+        </div>
+        <div>
+          <div class="d-label">Stack tecnológico</div>
+          <div class="stack-tags" id="d-stack"></div>
+        </div>
+        <div class="d-divider"></div>
+        <div class="action-row" id="d-actions"></div>
+      </div>
     </div>
   </div>
-</div>
 
-<script>
-// ── DATOS de proyectos ────────────────────────────────────────────
-// Para agregar video: mediaType:'youtube', mediaSrc:'https://www.youtube.com/embed/ID'
-// Para video local:   mediaType:'video',   mediaSrc:'videos/demo.mp4'
-const BASE = 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/';
+  <script>
+    // ── DATOS de proyectos ────────────────────────────────────────────
+    // Para agregar video: mediaType:'youtube', mediaSrc:'https://www.youtube.com/embed/ID'
+    // Para video local:   mediaType:'video',   mediaSrc:'videos/demo.mp4'
+    const BASE = 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Img/';
 
-const proyectos = {
-  agenda: {
-    title:'Agenda de Actividades', year:'2025', status:'finished', statusLabel:'Terminado',
-    logo: BASE+'AgendaLog.png',
-    stack:['Java','JSP','HTML','CSS','SQL Workbench','MVC'],
-    desc:'Aplicación web con arquitectura MVC para gestión de actividades, usuarios y permisos. Incluye autenticación, roles y operaciones CRUD completas.',
-    mediaType: 'video',
-    mediaSrc:  'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Agenda.mp4',
-    github:'https://github.com/yulkatesp', demo:'',
-  },
-  emulador: {
-    title:'Emulador de Juegos', year:'2025', status:'finished', statusLabel:'Terminado',
-    logo: BASE+'EmuLogo.png',
-    stack:['Python','PyQt5','Qt Designer','PyGame','TKinter'],
-    desc:'Emulador de escritorio que integra juegos construidos con Pygame y TKinter dentro de una interfaz PyQt5 unificada.',
-    mediaType: 'video',
-    mediaSrc:  'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Emulador.mp4',
-    github:'https://github.com/yulkatesp', demo:'',
-  },
-  ods14: {
-    title:'App Lecciones ODS 14 — Vida Submarina', year:'2025', status:'finished', statusLabel:'Terminado',
-    logo: BASE+'AprenLogo.png',
-    stack:['Python','Django','Expo GO','React Native'],
-    desc:'Aplicación móvil para el aprendizaje sobre vida submarina, contribuyendo al ODS 14 de la ONU. Backend en Django y frontend con Expo GO.',
-    mediaType: 'video',
-    mediaSrc:  'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Mar.mp4',
-    github:'https://github.com/yulkatesp', demo:'',
-  },
-  lengua: {
-    title:'Programa Lengua de Señas Colombiana', year:'2023', status:'finished', statusLabel:'Terminado',
-    logo: BASE+'LengLogo.png',
-    stack:['Python','PyQt5','Qt Designer'],
-    desc:'Programa de escritorio para aprender LSC con categorías de vocabulario básico, abecedario e ilustraciones interactivas.',
-    mediaType: 'video',
-    mediaSrc:  'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/LS.mp4',
-    github:'https://github.com/yulkatesp', demo:'',
-  },
-  dashboard: {
-    title:'Dashboard — Gestión de Seguridad', year:'2025', status:'finished', statusLabel:'Terminado',
-    logo: BASE+'GestLogo.png',
-    stack:['HTML','CSS'],
-    desc:'Dashboard de seguridad informática basado en normas ISO que visualiza la gestión de activos de una app de agenda con datos sensibles de usuarios.',
-    mediaType: 'video',
-    mediaSrc:  'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Dashboard.mp4',
-    github:'https://github.com/yulkatesp', demo:'',
-  },
-  iso: {
-    title:'Herramienta Auditoría ISO 27001', year:'2026', status:'live', statusLabel:'En vivo',
-    logo: BASE+'IsoLogo.png',
-    stack:['Python','Django','ISO 27001','Excel','PDF'],
-    desc:'Herramienta CRUD para checklist de controles ISO 27001. Registra empresas, genera reportes en Excel y PDF, y administra activos, vulnerabilidades y versiones de documentos.',
-    mediaType: 'video',
-    mediaSrc:  'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/ISO.mp4',
-    github:'https://github.com/yulkatesp/Auditoria27001', demo:'',
-  },
-  'agenda-movil': {
-    title:'App Móvil Agenda Estudiantil', year:'2026', status:'live', statusLabel:'En vivo',
-    logo: BASE+'TareasLogo.png',
-    stack:['Kotlin','Java','XAMPP','MySQL','PHP'],
-    desc:'App Android CRUD para gestión académica estudiantil con registro de tareas, exámenes y calendario. Frontend en Kotlin y backend en Java + PHP sobre XAMPP.',
-    mediaType: 'video',
-    mediaSrc:  'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/App.mp4',
-    github:'https://github.com/yulkatesp', demo:'',
-  },
-};
+    const proyectos = {
+      agenda: {
+        title: 'Agenda de Actividades', year: '2025', status: 'finished', statusLabel: 'Terminado',
+        logo: BASE + 'AgendaLog.png',
+        stack: ['Java', 'JSP', 'HTML', 'CSS', 'SQL Workbench', 'MVC'],
+        desc: 'Aplicación web con arquitectura MVC para gestión de actividades, usuarios y permisos. Incluye autenticación, roles y operaciones CRUD completas.',
+        mediaType: 'video',
+        mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Agenda.mp4',
+        github: 'https://github.com/yulkatesp', demo: '',
+      },
+      emulador: {
+        title: 'Emulador de Juegos', year: '2025', status: 'finished', statusLabel: 'Terminado',
+        logo: BASE + 'EmuLogo.png',
+        stack: ['Python', 'PyQt5', 'Qt Designer', 'PyGame', 'TKinter'],
+        desc: 'Emulador de escritorio que integra juegos construidos con Pygame y TKinter dentro de una interfaz PyQt5 unificada.',
+        mediaType: 'video',
+        mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Emulador.mp4',
+        github: 'https://github.com/yulkatesp', demo: '',
+      },
+      ods14: {
+        title: 'App Lecciones ODS 14 — Vida Submarina', year: '2025', status: 'finished', statusLabel: 'Terminado',
+        logo: BASE + 'AprenLogo.png',
+        stack: ['Python', 'Django', 'Expo GO', 'React Native'],
+        desc: 'Aplicación móvil para el aprendizaje sobre vida submarina, contribuyendo al ODS 14 de la ONU. Backend en Django y frontend con Expo GO.',
+        mediaType: 'video',
+        mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Mar.mp4',
+        github: 'https://github.com/yulkatesp', demo: '',
+      },
+      lengua: {
+        title: 'Programa Lengua de Señas Colombiana', year: '2023', status: 'finished', statusLabel: 'Terminado',
+        logo: BASE + 'LengLogo.png',
+        stack: ['Python', 'PyQt5', 'Qt Designer'],
+        desc: 'Programa de escritorio para aprender LSC con categorías de vocabulario básico, abecedario e ilustraciones interactivas.',
+        mediaType: 'video',
+        mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/LS.mp4',
+        github: 'https://github.com/yulkatesp', demo: '',
+      },
+      dashboard: {
+        title: 'Dashboard — Gestión de Seguridad', year: '2025', status: 'finished', statusLabel: 'Terminado',
+        logo: BASE + 'GestLogo.png',
+        stack: ['HTML', 'CSS'],
+        desc: 'Dashboard de seguridad informática basado en normas ISO que visualiza la gestión de activos de una app de agenda con datos sensibles de usuarios.',
+        mediaType: 'video',
+        mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Dashboard.mp4',
+        github: 'https://github.com/yulkatesp', demo: '',
+      },
+      iso: {
+        title: 'Herramienta Auditoría ISO 27001', year: '2026', status: 'live', statusLabel: 'En vivo',
+        logo: BASE + 'IsoLogo.png',
+        stack: ['Python', 'Django', 'ISO 27001', 'Excel', 'PDF'],
+        desc: 'Herramienta CRUD para checklist de controles ISO 27001. Registra empresas, genera reportes en Excel y PDF, y administra activos, vulnerabilidades y versiones de documentos.',
+        mediaType: 'video',
+        mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/ISO.mp4',
+        github: 'https://github.com/yulkatesp/Auditoria27001', demo: '',
+      },
+      'agenda-movil': {
+        title: 'App Móvil Agenda Estudiantil', year: '2026', status: 'live', statusLabel: 'En vivo',
+        logo: BASE + 'TareasLogo.png',
+        stack: ['Kotlin', 'Java', 'XAMPP', 'MySQL', 'PHP'],
+        desc: 'App Android CRUD para gestión académica estudiantil con registro de tareas, exámenes y calendario. Frontend en Kotlin y backend en Java + PHP sobre XAMPP.',
+        mediaType: 'video',
+        mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/App.mp4',
+        github: 'https://github.com/yulkatesp', demo: '',
+      },
+    };
 
-// ── Abrir drawer ──────────────────────────────────────────────────
-function openDrawer(id) {
-  const p = proyectos[id];
-  if (!p) return;
+    // ── Abrir drawer ──────────────────────────────────────────────────
+    function openDrawer(id) {
+      const p = proyectos[id];
+      if (!p) return;
 
-  // Icono con logo
-  const iconEl = document.getElementById('d-icon');
-  iconEl.innerHTML = `<img src="${p.logo}" alt="${p.title}" onerror="this.outerHTML='<span style=font-size:22px>📁</span>'">`;
+      // Icono con logo
+      const iconEl = document.getElementById('d-icon');
+      iconEl.innerHTML = `<img src="${p.logo}" alt="${p.title}" onerror="this.outerHTML='<span style=font-size:22px>📁</span>'">`;
 
-  document.getElementById('d-title').textContent = p.title;
-  document.getElementById('d-year').textContent  = p.year;
-  document.getElementById('d-status').innerHTML  = `<span class="status-pill ${p.status}">${p.statusLabel}</span>`;
+      document.getElementById('d-title').textContent = p.title;
+      document.getElementById('d-year').textContent = p.year;
+      document.getElementById('d-status').innerHTML = `<span class="status-pill ${p.status}">${p.statusLabel}</span>`;
 
-  // Video
-  const videoEl = document.getElementById('d-video');
-  if (p.mediaType === 'youtube' && p.mediaSrc) {
-    videoEl.innerHTML = `<iframe src="${p.mediaSrc}" allowfullscreen allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"></iframe>`;
-  } else if (p.mediaType === 'video' && p.mediaSrc) {
-    videoEl.innerHTML = `<video src="${p.mediaSrc}" controls></video>`;
-  } else {
-    videoEl.innerHTML = `
+      // Video
+      const videoEl = document.getElementById('d-video');
+      if (p.mediaType === 'youtube' && p.mediaSrc) {
+        videoEl.innerHTML = `<iframe src="${p.mediaSrc}" allowfullscreen allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"></iframe>`;
+      } else if (p.mediaType === 'video' && p.mediaSrc) {
+        videoEl.innerHTML = `<video src="${p.mediaSrc}" controls></video>`;
+      } else {
+        videoEl.innerHTML = `
       <div class="video-placeholder">
         <div class="play-ring">
           <svg viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
         </div>
         <span>Agrega un video: cambia mediaType a 'youtube' o 'video'</span>
       </div>`;
-  }
+      }
 
-  // Descripción y stack
-  document.getElementById('d-desc').textContent = p.desc;
-  document.getElementById('d-stack').innerHTML  = p.stack.map(t => `<span class="s-tag">${t}</span>`).join('');
+      // Descripción y stack
+      document.getElementById('d-desc').textContent = p.desc;
+      document.getElementById('d-stack').innerHTML = p.stack.map(t => `<span class="s-tag">${t}</span>`).join('');
 
-  // Botones
-  let btns = '';
-  if (p.github) btns += `<a class="action-btn github" href="${p.github}" target="_blank">
+      // Botones
+      let btns = '';
+      if (p.github) btns += `<a class="action-btn github" href="${p.github}" target="_blank">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
     Ver en GitHub
   </a>`;
-  if (p.demo) btns += `<a class="action-btn demo" href="${p.demo}" target="_blank">
+      if (p.demo) btns += `<a class="action-btn demo" href="${p.demo}" target="_blank">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
     Ver demo
   </a>`;
-  if (!p.github && !p.demo) btns = `<span class="action-btn muted">Sin enlaces disponibles aún</span>`;
-  document.getElementById('d-actions').innerHTML = btns;
+      if (!p.github && !p.demo) btns = `<span class="action-btn muted">Sin enlaces disponibles aún</span>`;
+      document.getElementById('d-actions').innerHTML = btns;
 
-  document.getElementById('overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
+      document.getElementById('overlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
 
-function closeDrawer() {
-  document.getElementById('overlay').classList.remove('open');
-  document.body.style.overflow = '';
-  setTimeout(() => { document.getElementById('d-video').innerHTML = ''; }, 380);
-}
+    function closeDrawer() {
+      document.getElementById('overlay').classList.remove('open');
+      document.body.style.overflow = '';
+      setTimeout(() => { document.getElementById('d-video').innerHTML = ''; }, 380);
+    }
 
-function handleOverlayClick(e) {
-  if (e.target === document.getElementById('overlay')) closeDrawer();
-}
+    function handleOverlayClick(e) {
+      if (e.target === document.getElementById('overlay')) closeDrawer();
+    }
 
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
 
-// ── Navegación sidebar ────────────────────────────────────────────
-const labels = { home:'Inicio', perfil:'Mi <span>Perfil</span>', proyectos:'Mis <span>Proyectos</span>', certificados:'Mis <span>Certificados</span>' };
-document.querySelectorAll('.nav-btn[data-view]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const target = btn.dataset.view;
-    document.querySelectorAll('.nav-btn[data-view]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-    document.getElementById('view-' + target).classList.add('active');
-    document.getElementById('page-label').innerHTML = labels[target] || target;
-  });
-});
-</script>
+    // ── Navegación sidebar ────────────────────────────────────────────
+    const labels = { home: 'Inicio', perfil: 'Mi <span>Perfil</span>', proyectos: 'Mis <span>Proyectos</span>', certificados: 'Mis <span>Certificados</span>' };
+    document.querySelectorAll('.nav-btn[data-view]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.view;
+        document.querySelectorAll('.nav-btn[data-view]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+        document.getElementById('view-' + target).classList.add('active');
+        document.getElementById('page-label').innerHTML = labels[target] || target;
+      });
+    });
+  </script>
 </body>
+
 </html>

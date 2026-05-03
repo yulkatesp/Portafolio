@@ -1849,6 +1849,16 @@
                     stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <polyline points="9 18 15 12 9 6" />
                   </svg></button>
+                  <button class="project-link"
+                  onclick="event.stopPropagation();window.open('https://gestorcitas-production.up.railway.app/','_blank')"
+                  style="color:var(--rose-deep)">
+                  Ver app <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </button>
               </div>
             </div>
 
@@ -2151,7 +2161,7 @@
     const proyectos = {
       agenda: { title: 'Agenda de Actividades', year: '2025', status: 'finished', statusLabel: 'Terminado', logo: BASE + 'AgendaLog.png', stack: ['Java', 'JSP', 'HTML', 'CSS', 'SQL Workbench', 'MVC'], desc: 'Aplicación web con arquitectura MVC para gestión de actividades, usuarios y permisos. Incluye autenticación, roles y operaciones CRUD completas.', mediaType: 'video', mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Agenda.mp4', github: 'https://github.com/yulkatesp', demo: '', },
       emulador: { title: 'Emulador de Juegos', year: '2025', status: 'finished', statusLabel: 'Terminado', logo: BASE + 'EmuLogo.png', stack: ['Python', 'PyQt5', 'Qt Designer', 'PyGame', 'TKinter'], desc: 'Emulador de escritorio que integra juegos construidos con Pygame y TKinter dentro de una interfaz PyQt5 unificada.', mediaType: 'video', mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Emulador.mp4', github: 'https://github.com/yulkatesp', demo: '', },
-      'gestor-citas': { title: 'Gestor de Citas', year: '2026', status: 'live', statusLabel: 'En vivo', logo: BASE + 'CitaLogo.png', stack: ['JavaScript', 'Node.js', 'HTML', 'CSS', 'Railway'], desc: 'Aplicación web para gestión de agendamiento de citas médicas, con frontend en JavaScript y backend en Node.js, desplegada en Railway.', mediaType: 'video', mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Citas.mp4', github: 'https://github.com/yulkatesp/GestorCitas', demo: '', },
+      'gestor-citas': { title: 'Gestor de Citas', year: '2026', status: 'live', statusLabel: 'En vivo', logo: BASE + 'CitaLogo.png', stack: ['JavaScript', 'Node.js', 'HTML', 'CSS', 'Railway'], desc: 'Aplicación web para gestión de agendamiento de citas médicas, con frontend en JavaScript y backend en Node.js, desplegada en Railway.', mediaType: 'video', mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Citas.mp4', github: 'https://github.com/yulkatesp/GestorCitas', demo: 'https://gestorcitas-production.up.railway.app/', },
       ods14: { title: 'App Lecciones ODS 14 — Vida Submarina', year: '2025', status: 'finished', statusLabel: 'Terminado', logo: BASE + 'AprenLogo.png', stack: ['Python', 'Django', 'Expo GO', 'React Native'], desc: 'Aplicación móvil para el aprendizaje sobre vida submarina, contribuyendo al ODS 14 de la ONU. Backend en Django y frontend con Expo GO.', mediaType: 'video', mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Mar.mp4', github: 'https://github.com/yulkatesp', demo: '', },
       lengua: { title: 'Programa Lengua de Señas Colombiana', year: '2023', status: 'finished', statusLabel: 'Terminado', logo: BASE + 'LengLogo.png', stack: ['Python', 'PyQt5', 'Qt Designer'], desc: 'Programa de escritorio para aprender LSC con categorías de vocabulario básico, abecedario e ilustraciones interactivas.', mediaType: 'video', mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/LS.mp4', github: 'https://github.com/yulkatesp', demo: '', },
       dashboard: { title: 'Dashboard — Gestión de Seguridad', year: '2025', status: 'finished', statusLabel: 'Terminado', logo: BASE + 'GestLogo.png', stack: ['HTML', 'CSS'], desc: 'Dashboard de seguridad informática basado en normas ISO que visualiza la gestión de activos de una app de agenda con datos sensibles de usuarios.', mediaType: 'video', mediaSrc: 'https://raw.githubusercontent.com/yulkatesp/Portafolio/main/Videos/Dashboard.mp4', github: 'https://github.com/yulkatesp', demo: '', },

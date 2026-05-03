@@ -115,6 +115,14 @@ Estudiante de **Ingeniería de Sistemas** en la Universidad de San Buenaventura 
 
 ---
 
+## Autora
+
+**Katerin Espitia** — Desarrolladora del proyecto
+
+[![GitHub](https://img.shields.io/badge/GitHub-yulkatesp-181717?style=for-the-badge&logo=github)](https://github.com/yulkatesp)
+
+---
+
 <div align="center">
   <sub>Hecho con por Katerin · 2026</sub>
 </div>
